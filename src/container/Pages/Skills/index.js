@@ -27,7 +27,7 @@ const Skills = () => {
   const topMotion = {
     rest: { height: "0px", top: "50%", backgroundColor: "#000000" },
     hover: {
-      height: "50px",
+      height: "50%",
       backgroundColor: "#f2bb05",
       top: "0px"
     }
@@ -35,7 +35,7 @@ const Skills = () => {
   const bottomMotion = {
     rest: { height: "0px", bottom: "50%", backgroundColor: "#000000" },
     hover: {
-      height: "50px",
+      height: "50%",
       backgroundColor: "#f2bb05",
       bottom: "0px"
     }
@@ -43,7 +43,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className='flex items-start flex-col justify-center w-full min-h-screen py-20  pb-64'>
+      <div className='flex items-start flex-col justify-center w-full min-h-screen pb-64'>
         <p className='font-poppins font-medium text-sm text-left text-text tracking-[5px] mb-4 ml-52'>TOOLS OF MY TRADE</p>
         <AnimatePresence exitBeforEneter>
           {skills.map((skill, index) => {
@@ -56,7 +56,7 @@ const Skills = () => {
                 animate="rest"
                 onMouseEnter={() => setIsHovered(index)}
                 onMouseLeave={() => setIsHovered(null)}
-                className='h-[100px] w-full border-t border-b border-t-[rgb(184,172,153,0.2)] border-b-[rgb(184,172,153,0.2)] relative'
+                className='h-fit w-full relative'
               >
                 <motion.div
                   variants={topMotion}
@@ -71,11 +71,11 @@ const Skills = () => {
                   transition={{ duration: 0.5 }}
                 />
 
-                <motion.div className='w-full'>
+                <motion.div className='w-full border-t border-b border-t-[rgb(184,172,153,0.2)] border-b-[rgb(184,172,153,0.2)] overflow-hidden'>
                   {isHovered === index ?
-                    <p key={index} className='text-black text-8xl font-medium font-poppins uppercase pl-52 z-50 relative'>{skill.text}</p>
+                    <p key={index} className='text-black text-[6.875rem] leading-none font-medium font-poppins uppercase pl-52 z-50 relative'>{skill.text}</p>
                     :
-                    <TextReveal key={index} text={skill.text} specialWord={[]} className={"text-text text-8xl font-medium font-poppins uppercase pl-52 hover:text-black "} />
+                    <TextReveal key={index} text={skill.text} specialWord={[]} className={"text-text text-[6.875rem] leading-none font-medium font-poppins uppercase pl-52 hover:text-black "} />
                   }
 
                 </motion.div>
