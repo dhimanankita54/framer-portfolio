@@ -3,6 +3,7 @@ import Home from '../Home'
 import About from '../About'
 import Skills from '../Skills'
 import Audio from '../../components/Audio'
+import LinksNav from '../../components/ContentLinks'
 
 const Main = () => {
     const [loaded, setLoaded] = useState(false);
@@ -20,6 +21,7 @@ const Main = () => {
             </div>
             :
             <div>
+                <LinksNav />
                 <Audio />
                 <Home />
                 <About />

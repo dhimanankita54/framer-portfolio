@@ -30,7 +30,7 @@ export default function Home() {
       </MaskedElement>
 
       <AnimatePresence>
-        <motion.div className="min-h-screen flex flex-col items-center justify-center">
+        <motion.div id="about" className="min-h-screen flex flex-col items-center justify-center">
           {words.map((word, index) => (
             <div className="relative h-fit overflow-hidden" key={index}>
               <motion.span

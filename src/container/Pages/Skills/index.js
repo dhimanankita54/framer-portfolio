@@ -43,7 +43,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className='flex items-start flex-col justify-center w-full min-h-screen pb-64'>
+      <div id="skills" className='flex items-start flex-col justify-center w-full min-h-screen pt-16 pb-64'>
         <p className='font-poppins font-medium text-sm text-left text-text tracking-[5px] mb-4 ml-52'>TOOLS OF MY TRADE</p>
         <AnimatePresence exitBeforEneter>
           {skills.map((skill, index) => {
